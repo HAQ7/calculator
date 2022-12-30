@@ -1,0 +1,184 @@
+/*start global css ------------------------------------------------------------------------------------- */
+body {
+  background-color: hsl(240, 2%, 10%);
+  font-family: "Noto Sans Mono", monospace;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  background-image: url("/assets/img/stacked-peaks-haikei.svg");
+  background-size: cover;
+}
+/*end global css -------------------------------------------------------------------------------------- */
+/* start calc ---------------------------------------------------------------------------------------- */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+p,
+input {
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: center;
+  background: none;
+  border: none;
+}
+
+input {
+  width: 100%;
+}
+
+.user-inputx {
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 3rem;
+  margin: 0;
+  text-align: center;
+  background: none;
+  border: none;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.weer {
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90vw;
+}
+
+.weerx {
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20em;
+}
+
+.weerx::after {
+  content: "";
+  height: 0.1em;
+  width: 20em;
+  background-color: white;
+  box-shadow: 0 0px 10000px 10px #ffffff;
+}
+
+.weer::after {
+  content: "";
+  height: 0.1em;
+  width: 90vw;
+  background-color: white;
+  box-shadow: 0 0px 10000px 10px #ffffff;
+}
+
+.grid-buttons {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-row-gap: 1em;
+}
+
+.grid-numbers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-oparations {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+button {
+  position: relative;
+  width: 4em;
+  display: grid;
+  place-items: center;
+  margin: 0.75em;
+  padding: 0.75em;
+  border: 0;
+  color: white;
+  box-shadow: -0.5em 0 0 black, -10px 10px 18px hsl(0, 0%, 0%);
+  transition: 0.2s;
+  animation: none;
+}
+
+button:hover {
+  transform: translateX(-0.1em);
+  box-shadow: -0.4em 0 0 black, -10px 10px 18px hsl(0, 0%, 0%);
+}
+
+
+
+.grid-oparations button {
+  background-color: hsl(27, 100%, 40%);
+}
+
+.grid-numbers button {
+  background-color: #0D3280;
+}
+
+.button-click {
+  animation: a1 0.2s;
+}
+
+
+@keyframes a1 {
+  0% {
+    transform: translateX(-0.1em);
+    box-shadow: -0.4em 0 0 black, -10px 10px 18px hsl(0, 0%, 0%);
+  }
+  50% {
+    transform: translateX(-0.5em);
+    box-shadow: 0em 0 0 black, -10px 10px 18px hsl(0, 0%, 0%);
+  }
+  100% {
+    transform: translateX(-0.1em);
+    box-shadow: -0.4em 0 0 black, -10px 10px 18px hsl(0, 0%, 0%);
+  }
+}
+
+.textPop {
+  animation: resultPop 0.2s;
+}
+
+@keyframes resultPop {
+  0% {
+    transform: translateY(-1em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.grid-numbers > div {
+  display: flex;
+  grid-column: 1/4;
+}
+
+.a0 {
+  flex: 2;
+}
+
+.resultButtons {
+  display: flex;
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.resultButtons button {
+  flex-grow: 2;
+  background-color: #0D8050;;
+}
+
+label {
+  font-size: 2rem;
+  color: white;
+  text-shadow: -10px 10px 18px hsl(0, 0%, 0%);
+}

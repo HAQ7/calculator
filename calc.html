@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/calcStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@700&display=swap" rel="stylesheet">
+    <script src="assets\scripts\app.js" defer></script>
+</head>
+<body>
+    <div class="weerx">
+        <label for="text">Result :</label>
+        <input type="text" class="user-inputx" style="color: white;"  disabled></input></div>
+    <div class="weer">
+        <label for="text">Calc :</label>
+        <input type="text" class="user-input" style="color: white;"  disabled></input></div>
+    <div class="grid-buttons">
+        <div class="grid-numbers">
+            <button id="7"><p>7</p></button>
+            <button id="8"><p>8</p></button>
+            <button id="9"><p>9</p></button>
+            <button id="4"><p>4</p></button>
+            <button id="5"><p>5</p></button>
+            <button id="6"><p>6</p></button>
+            <button id="1"><p>1</p></button>
+            <button id="2"><p>2</p></button>
+            <button id="3"><p>3</p></button>
+            <div>
+                <button class="a0" id="0"><p>0</p></button>
+                <button id="."><p>.</p></button>
+            </div>
+            
+        </div>
+        <div class="grid-oparations">
+            <button id="^"><p>^</p></button>
+            <button id="%"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABSUlEQVRIie2UsUrEQBRFt1q/QAWTlPon+03uj4hYu80SrFz/QERsFRasVHArFzRsfyz2RobMZJLMjF0upHnvzTvJ5HInk1GjBgiYAg/AfcySHCiBCvgAroDjjjNz9nqOgW6xtQGyljMFsNPcLBRcasEtkOlZqbboOFMGQbWk0pLMqBX1VzvmZ+rtgCIGDECfugy1Vus8GBoArg31ChzEgn+0LDdq1lUnMVQDfKNlK/YOz4E71a6NuXhDNcBnwBe2PoETzaQxlAOeAUtd+xtwARyqZxpqngza46VqQ62BqWpm0lX6XacpoZahaE+6LS1JFwK2DIU/6ZYpoE5D4U+671hoa0LV9+o446wPBbcm1L+BXYZq9DfqeZMuBOxNKGChvjfphkI7E0ourr/a1F/ShYBftMSbUMARcAm800i6UPAT8IgSatSovvoFVyD4dp8vBX4AAAAASUVORK5CYII="></button>
+            <button id="/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAdUlEQVRIie3Vuw2AMAxF0RfmgH34rIHE2JESmOPSgJBSogQC8unc+NmFZcmYmgATsAIRGJ4MjlzCnR5N7qGKAoZj6wD0b89jPgAYAU9+Pr13lwQHSV2hvTbnXHsWr91xGrxI8gVyvKS5QF/zN/aPH2P/2FRtB4vzvijPagU2AAAAAElFTkSuQmCC"></button>
+            <button id="x"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAzklEQVRIie3S0QqCMBTGce0Bs0Txwp69wMgKewOFfzcTlLaxc9Qg2ne7nfPj7CxJYmL+JkAJvIAbcBDUHYE70AGFFE1N4ZgeqALqKnN3TCeCTZMn83hxCwrw0MC5pZEVd6A9kIth07CwNByA0+RO6bhTq9AQfDN0grueMmgVS3Hb5NtMKsDF6E5op8ozfRwf6ePDrY1+/3M5Jh2A2rHz5ZP70MmddXEgC31KzyoyDXyV7M+BNxq4DUU9eKuBM6ABzpInM3UXU7sXwzExP5s3um/syN1W7JQAAAAASUVORK5CYII="></button>
+            <button id="-"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAU0lEQVRIie3PsQmAQBBE0b/WoQVpHcKVvSBYxxgJcskZuInMyybZz4KZmdkbkjZJqe+lpPXZii58AEvRX2dEzPeYiiJDfbgBWdBJYC+4a2Zmf3QBdKVlhPjFs54AAAAASUVORK5CYII="></button>
+            <button id="+"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAkElEQVRIie2UQQqDMBBF/3iO9j7ahXiIQo+dYuvCXuK5sTRKQQyNSJ0HA8mQ/EeyGMnZM0ADvIAeqLcUd3x4pmRYophJiNnqnCJF/Atc7OI/FwMXILDAPGTp/JhZxXdsFtBKOmd5otSZ2em92cdXS7pJChk8QdI1bvisdrGLjyu+R+scA+c7QAU8xio3EzspDJEzi+AbBA6CAAAAAElFTkSuQmCC"></button>
+            <button id="("><p>(</p></button>
+            <button id=")"><p>)</p></button>
+        </div>
+        <div class="resultButtons">
+            <button class="btn-delete" id="d"><p>AC</p></button>
+            <button id="eq"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAWUlEQVRIie3UsQmAUAxF0Rvn0IF0DsGxA4JzPCvh8xtBDIi806XJJU3AzH5F0iIp9b6UNLet6MI7MBXddUTEeA1DUeRWH96ALOgksBbsNfsqf65K/lxm9tgJ2xzLB9xIgGIAAAAASUVORK5CYII="></button>
+        </div>
+        
+</div>
+</body>
+</html>
